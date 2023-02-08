@@ -1,4 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
+import {createStackNavigator} from "@react-navigation/stack";
+import {NavigationContainer, DefaultTheme} from "@react-navigation/native";
+import {useFonts} from "/screen";
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
