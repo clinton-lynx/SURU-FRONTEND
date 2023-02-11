@@ -1,11 +1,11 @@
 import React from 'react';
 import { ScrollBack, LightMode, Arrow } from "../assets/icons/Icons";
 
-import { StyleSheet, Text, Image, View, TextInput } from 'react-native';
+import { StyleSheet, Text, Image, View, ScrollView, TextInput } from 'react-native';
 
 const Signup = ({ navigation }) => {
     return (
-        <View style={styles.screenContainer} >
+        <ScrollView style={styles.screenContainer} >
 
             <View style={styles.arrowBackWrapper}>
                 <Arrow />
@@ -14,11 +14,28 @@ const Signup = ({ navigation }) => {
                 <Text style={styles.screenTitle}>Sign Up</Text>
             </View>
             <View style={styles.SignupImageWrapper}>
-                <Image style={styles.SignupImage} source={require('../assets/images/sign_up1.jpg')} />
+                <Image style={styles.SignupImage} resizeMode='contain' source={require('../assets/images/signup_1.png')} />
             </View>
             <View style={styles.formWrapper}>
-                <TextInput placeholder='Name' />
-                <TextInput placeholder='Phone Number' />
+                <TextInput style={{
+                    minWidth: 300,
+                    backgroundColor: '#F3F3F3',
+                    borderRadius: 5,
+                    paddingHorizontal: 20,
+                    paddingVertical: 14,
+                    fontSize: 16,
+                }} placeholder='Name Surname' />
+                <TextInput
+                    style={{
+                        minWidth: 320,
+                        backgroundColor: '#F3F3F3',
+                        borderRadius: 5,
+                        paddingHorizontal: 20,
+                        marginVertical: 16,
+                        paddingVertical: 14,
+                        fontSize: 16,
+                    }}
+                    placeholder='Phone Number' />
             </View>
             <View style={styles.termsWrapper}>
                 <Text style={styles.terms}> We need to verify you. We will send you a one time verification code. </Text>
@@ -28,9 +45,9 @@ const Signup = ({ navigation }) => {
             </View>
             <View style={styles.loginWrapper} >
                 <Text style={styles.login} >Already have an account?</Text>
-                <Text style={styles.loginWrapper}> Login</Text>
+                <Text style={styles.loginLink}> Login</Text>
             </View>
-        </View>
+        </ScrollView>
     )
 }
 
@@ -38,16 +55,17 @@ export default Signup;
 
 const styles = StyleSheet.create({
     screenContainer: {
-        backgroundColor: '#F5F5F5',
+        backgroundColor: '#Fff',
         flex: 1,
-        paddingTop: 60,
+        paddingTop: 50,
+        paddingBottom: 50,
         paddingHorizontal: 16,
     },
     arrowBackWrapper: {
         // marginBottom: 10,
     },
     screenTitleWrapper: {
-        marginVertical: 20,
+        marginVertical: 18,
         alignSelf: 'center',
     },
     screenTitle: {
@@ -57,11 +75,52 @@ const styles = StyleSheet.create({
     },
     SignupImageWrapper: {
         alignSelf: 'center',
-        width: '80%',
+
     },
     SignupImage: {
-        maxWidth: '100%',
+        // width: '100%',
+        maxWidth: 300,
+    },
+    formWrapper: {
+        alignSelf: 'center',
+        marginTop: 10,
+
+    },
+    termsWrapper: {
+    },
+    terms: {
+        color: '#7F4E1D',
+        // maxWidth:270,
+        fontSize: 16,
+    }, buttonWrapper: {
+        backgroundColor: '#2A4905',
+        borderRadius: 30,
+        paddingVertical: 10,
+        paddingHorizontal: 12,
+        marginBottom: 10,
+        marginTop: 40,
+    },
+    button: {
+        borderRadius: 30,
+        alignSelf: 'center',
+        color: '#fff',
+        fontSize: 24,
+    },
+    loginWrapper: {
+        flexDirection: 'row',
+        alignSelf: 'center'
+    },
+    login: {
+        fontSize: 16,
+        color: '#7F4E1D',
+    },
+    loginLink: {
+        fontSize: 16,
+        color: '#FF5E00',
     }
+
+
+
 
 
 

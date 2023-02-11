@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   btnPrimaryWrapper: {
-    backgroundColor: '#66C70E',
+    backgroundColor: '#2A4905',
     borderRadius: 30,
     paddingVertical: 10,
     paddingHorizontal: 12,
@@ -133,18 +133,17 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 30,
     borderWidth: 1,
-    borderColor: '#66C70E',
+    borderColor: '#2A4905',
     paddingHorizontal: 12
   },
   btnPrimary: {
     borderRadius: 30,
     alignSelf: 'center',
-    backgroundColor: '#66C70E',
-    color: '#fff',
+        color: '#fff',
     fontSize: 24,
   },
   btnSecondary: {
-    color: '#66C70E',
+    color: '#2A4905',
     fontSize: 24,
     alignSelf: 'center',
     justifyContent: 'center'
