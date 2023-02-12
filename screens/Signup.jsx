@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollBack, LightMode, Arrow } from "../assets/icons/Icons";
 
-import { StyleSheet, Text, Image, View, ScrollView, TextInput } from 'react-native';
+import { StyleSheet, Text, Image, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 
 const Signup = ({ navigation }) => {
     return (
@@ -18,7 +18,7 @@ const Signup = ({ navigation }) => {
             </View>
             <View style={styles.formWrapper}>
                 <TextInput style={{
-                    minWidth: 300,
+                    minWidth: '100%',
                     backgroundColor: '#F3F3F3',
                     borderRadius: 5,
                     paddingHorizontal: 20,
@@ -27,7 +27,7 @@ const Signup = ({ navigation }) => {
                 }} placeholder='Name Surname' />
                 <TextInput
                     style={{
-                        minWidth: 320,
+                        minWidth: '100%',
                         backgroundColor: '#F3F3F3',
                         borderRadius: 5,
                         paddingHorizontal: 20,
@@ -41,7 +41,11 @@ const Signup = ({ navigation }) => {
                 <Text style={styles.terms}> We need to verify you. We will send you a one time verification code. </Text>
             </View>
             <View style={styles.buttonWrapper}>
-                <Text style={styles.button}>Next</Text>
+                <TouchableOpacity style={styles.btnPrimaryWrapper} onPress={() =>
+                    navigation.navigate('SignCode', { name: 'signcode' })
+                }>
+                    <Text style={styles.button}>Next</Text>
+                </TouchableOpacity>
             </View>
             <View style={styles.loginWrapper} >
                 <Text style={styles.login} >Already have an account?</Text>
@@ -118,10 +122,4 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#FF5E00',
     }
-
-
-
-
-
-
 });
