@@ -14,7 +14,7 @@ const SignCode = ({navigation}) => {
         <Text style={styles.screenTitle}>Sign Up</Text>
     </View>
     <View style={styles.SignupImageWrapper}>
-        <Image style={styles.SignupImage} resizeMode='contain' source={require('../assets/images/signup_2.png')} />
+        <Image style={styles.SignupImage} resizeMode='contain' source={require('../assets/images/signcode.png')} />
     </View>
     <View>
         <Text 
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         // marginBottom: 10,
     },
     screenTitleWrapper: {
-        marginVertical: 18,
+        // marginVertical: 18,
         alignSelf: 'center',
     },
     screenTitle: {
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     },
     formWrapper: {
         alignSelf: 'center',
-        marginTop: 10,
+        // marginTop: 10,
 
     },
     termsWrapper: {
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         paddingVertical: 10,
         paddingHorizontal: 12,
-        marginBottom: 10,
+        marginBottom: 100,
         marginTop: 20,
     },
     button: {

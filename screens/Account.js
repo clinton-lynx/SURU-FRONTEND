@@ -1,14 +1,14 @@
 import React from 'react';
 import {View, Text} from 'react-native'
 
-const Explore = () => {
+const Account = () => {
   return (
   <View>
     <Text>
-        Explore Screen
+        Account Screen
     </Text>
   </View>
   )
 }
 
-export default Explore;
+export default Account;

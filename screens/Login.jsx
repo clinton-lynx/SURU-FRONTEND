@@ -14,7 +14,7 @@ const Login = ({navigation}) => {
         <Text style={styles.screenTitle}>Sign In</Text>
     </View>
     <View style={styles.SignupImageWrapper}>
-        <Image style={styles.SignupImage} resizeMode='contain' source={require('../assets/images/signup_1.png')} />
+        <Image style={styles.SignupImage} resizeMode='contain' source={require('../assets/images/login.png')} />
     </View>
     <View>
         <Text 
@@ -112,7 +112,8 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         paddingVertical: 10,
         paddingHorizontal: 12,
-        marginBottom: 10,
+        marginBottom: 100,
+        // marginBottom: 10,
         marginTop: 30,
     },
     button: {
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 24,
     },
-    loginWrapper: {
+    loginWrapper: { 
         flexDirection: 'row',
         alignSelf: 'center'
     },

@@ -14,7 +14,7 @@ const SignPass = ({navigation}) => {
         <Text style={styles.screenTitle}>Sign Up</Text>
     </View>
     <View style={styles.SignupImageWrapper}>
-        <Image style={styles.SignupImage} resizeMode='contain' source={require('../assets/images/signup_3.png')} />
+        <Image style={styles.SignupImage} resizeMode='contain' source={require('../assets/images/signpass.png')} />
     </View>
     <View>
         <Text 
@@ -122,7 +122,8 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         paddingVertical: 10,
         paddingHorizontal: 12,
-        marginBottom: 10,
+        marginBottom: 100,
+        // marginBottom: 10,
         marginTop: 40,
     },
     button: {
