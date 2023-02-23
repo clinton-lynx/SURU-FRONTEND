@@ -1,10 +1,18 @@
 import React from "react";
-import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { View, Text, ScrollView, StyleSheet, Image } from "react-native";
 import { Arrow } from "../assets/icons/Icons";
 
 const Cart = () => {
   return (
-    <ScrollView>
+    <ScrollView
+    style={{
+      backgroundColor: "#Fff",
+      flex: 1,
+      paddingTop: 40,
+      paddingBottom: 50,
+      paddingHorizontal: 16,
+    }}
+  >
       <View style={styles.arrowBackWrapper}>
         <Arrow />
       </View>
@@ -12,7 +20,7 @@ const Cart = () => {
         <Image
           style={styles.image}
           resizeMode="contain"
-          source={require("../assets/images/orange.png")}
+          source={require("../assets/images/yam.png")}
         />
       </View>
       <View>

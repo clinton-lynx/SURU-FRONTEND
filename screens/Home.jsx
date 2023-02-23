@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, ScrollView, StyleSheet, Image } from "react-native";
 import Categories from "../components/Categories";
-import Deals from "../components/Deals";
+import Deals from "../components/CategoryListing";
 import Navigator from "../components/Navigator";
 import Partner from "../components/Partner";
 import Wrapper from "../components/Wrapper";

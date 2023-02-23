@@ -10,6 +10,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Welcome from './screens/Welcome';
 import SignUp from './screens/Signup';
 import Explore from './screens/Explore';
+import Category from './screens/Category';
 import Cart from './screens/Cart';
 import CheckOut from './screens/CheckOut';
 import Account from './screens/Account';
@@ -135,9 +136,9 @@ const App = () => {
         })}
       >
         <Tab.Screen name={HOME} component={Home} />
-        <Tab.Screen name={EXPLORE} component={Explore} options={{ title: 'explore' }} />
-        <Tab.Screen name={SELL} component={Sell} options={{ title: 'cart' }} />
-        <Tab.Screen name={CART} component={Cart} options={{ title: 'sell' }} />
+        <Tab.Screen name={EXPLORE} component={Category} options={{ title: 'explore' }} />
+        <Tab.Screen name={CART} component={Cart} options={{ title: 'cart' }} />
+        <Tab.Screen name={SELL} component={Sell} options={{ title: 'sell' }} />
         <Tab.Screen name={ACCOUNT} component={Account} options={{ title: 'account' }} />
 
       </Tab.Navigator>

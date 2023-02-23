@@ -1,22 +1,14 @@
 import React from 'react';
 import { View,Text, StyleSheet } from 'react-native';
 import Category from './Category';
-import Deal from './Deal';
+import Deal from './FoodCategory';
 
 
 const Categories = props => {
   return (
     <View>
 
-    <View style={styles.sectionTitleWrapper}>
 
-    <View style={styles.sectionTitle}>
-        <Text style={styles.sectionTitleLeft}>
-            Popular deals
-        </Text>
-        <Text style={styles.sectionTitleRight}>see all</Text>
-    </View>
-    </View>
     <View style={styles.categoryWrapper}>
       {/* <Category/>
       <Category/>
@@ -24,6 +16,14 @@ const Categories = props => {
       <Category/>
       <Category/> */}
       {/* <Deal /> */}
+      <Deal />
+      <Deal />
+      <Deal />
+      <Deal />
+      <Deal />
+      <Deal />
+      <Deal />
+      <Deal />
       <Deal />
       <Deal />
       <Deal />
@@ -59,7 +59,9 @@ const styles = StyleSheet.create({
   categoryWrapper: {
     flexDirection: 'row',
     // paddingHorizontal: 20,
-    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    justifyContent: 'space-evenly',
    //  overflow: 'scroll', 
    }
 
