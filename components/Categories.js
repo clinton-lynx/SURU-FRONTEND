@@ -7,7 +7,7 @@ const Categories = props => {
   return (
     <View>
 
-    <View style={styles.sectionTitleWrapper}>
+     <View style={styles.sectionTitleWrapper}>
 
     <View style={styles.sectionTitle}>
         <Text style={styles.sectionTitleLeft}>
@@ -15,7 +15,7 @@ const Categories = props => {
         </Text>
         <Text style={styles.sectionTitleRight}>see all</Text>
     </View>
-    </View>
+    </View> 
     {/* <ScrollView> */}
       
     <View style={styles.categoryWrapper}>
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
   categoryWrapper: {
    flexDirection: 'row',
    paddingHorizontal: 20,
+   flexWrap: 'wrap',
    justifyContent: 'space-between',
   //  overflow: 'scroll', 
   }
