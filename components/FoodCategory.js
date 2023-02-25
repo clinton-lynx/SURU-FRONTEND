@@ -25,40 +25,40 @@ export default Deal;
 
 const styles =  StyleSheet.create({
 
-    foodItem: {
-        paddingVertical: 14,
-        paddingHorizontal: 8,
-        marginHorizontal: 6,
-        marginVertical: 6,
-        borderRadius: 20,
-        alignSelf: 'flex-start',
-        minWidth: 140,
-        width:'50%',
-                backgroundColor: 'white',
-        shadowColor: "black",
-        shadowOffset: {
-          width: 0,
-          height: 2,
-        },
-        shadowOpacity: 1.22,
-        shadowRadius: 35.22,
-        elevation: 50,
+foodItem: {
+    paddingVertical: 14,
+    paddingHorizontal: 8,
+    marginHorizontal: 6,
+    marginVertical: 6,
+    borderRadius: 20,
+    alignSelf: 'flex-start',
+    minWidth: 140,
+    width:'50%',
+            backgroundColor: 'white',
+    shadowColor: "black",
+    shadowOffset: {
+        width: 0,
+        height: 2,
     },
-    foodItemImageWrapper: {
+    shadowOpacity: 1.22,
+    shadowRadius: 35.22,
+    elevation: 50,
+},
+foodItemImageWrapper: {
 
-    },
-    foodItemImage :{
-        width: 120,
-    },
-    foodItemTitleWrapper: {
-    alignSelf: 'center',
-        
-    },
-    foodItemTitle: {
-        fontSize: 20,
-        fontWeight: '400',
-        textTransform: 'capitalize',
-        color: '#6D3805'
-    }
+},
+foodItemImage :{
+    width: 120,
+},
+foodItemTitleWrapper: {
+alignSelf: 'center',
+    
+},
+foodItemTitle: {
+    fontSize: 20,
+    fontWeight: '400',
+    textTransform: 'capitalize',
+    color: '#6D3805'
+}
 
 }) 

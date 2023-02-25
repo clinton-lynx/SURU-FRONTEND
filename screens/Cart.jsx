@@ -1,6 +1,14 @@
 import React from "react";
-import { View, Text, ScrollView, StyleSheet, Image } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import { Arrow, Car, Line, Star } from "../assets/icons/Icons";
+import RelatedProducts from "../components/RelatedProducts";
 
 const Cart = () => {
   return (
@@ -30,30 +38,49 @@ const Cart = () => {
         <Text style={styles.itemPrice}>N600</Text>
       </View>
       <View style={styles.itemRatingsWrapper}>
-        <View style={styles.itemRatingsLeft}>
-          <View style={styles.starIcon}>
-            <Star />
+        <View style={styles.itemRatings}>
+          <View style={styles.itemRatingsLeft}>
+            <View style={styles.starIcon}>
+              <Star />
+            </View>
+            <View style={styles.itemRatingsRatioWrapper}>
+              <Text style={styles.itemRatingsRatio}>4.5</Text>
+            </View>
+            <View style={styles.itemRatingsTotalWrapper}>
+              <Text style={styles.itemRatingsTotal}>70 ratings</Text>
+            </View>
           </View>
-          <View style={styles.itemRatingsRatioWrapper}>
-            <Text style={styles.itemRatingsRatio}>4.5</Text>
+          <View style={styles.itemRatingsMiddle}>
+            <View style={styles.dividerIcon}>
+              <Line />
+            </View>
           </View>
-          <View style={styles.itemRatingsTotalWrapper}>
-            <Text style={styles.itemRatingsTotal}>7.0 ratings</Text>
+          <View style={styles.itemRatingsRight}>
+            <View style={styles.carIcon}>
+              <Car />
+            </View>
+            <View style={styles.itemDeliveryWrapper}>
+              <Text style={styles.itemDelivery}>Free delivery</Text>
+            </View>
           </View>
         </View>
-        <View style={styles.itemRatingsMiddle}>
-          <View style={styles.dividerIcon}>
-            <Line />
-          </View>
-        </View>
-        <View style={styles.itemRatingsRight}>
-          <View style={styles.carIcon}>
-            <Car />
-          </View>
-          <View style={styles.itemDeliveryWrapper}>
-            <Text style={styles.itemDelivery}>Free delivery</Text>
-          </View>
-        </View>
+      </View>
+      <View style={styles.itemDetailWrapper}>
+        <Text style={styles.itemDetail}>
+          Bananas contain a fair amount of fiber and several antioxidants...
+        </Text>
+      </View>
+      <View style={styles.buttonWrapper}>
+        <TouchableOpacity
+          style={styles.btnPrimaryWrapper}
+          onPress={() => navigation.navigate("SignUp", { name: "signup" })}
+        >
+          <Text style={styles.button}>Add to Cart</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View>
+        <RelatedProducts />
       </View>
     </ScrollView>
   );
@@ -93,5 +120,78 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#F47A0A",
     textTransform: "capitalize",
+  },
+  itemRatingsWrapper: {
+    // maxWidth: 300,
+    width: "100%",
+    alignSelf: "center",
+    // marginHorizontal: 'auto',
+    marginVertical: 18,
+  },
+  dividerIcon: {
+    marginHorizontal: 20,
+  },
+  starIcon: {
+    marginRight: 5,
+    verticalAlign: "",
+  },
+  carIcon: {
+    marginRight: 5,
+  },
+  itemRatings: {
+    paddingHorizontal: 30,
+    paddingVertical: 20,
+    borderColor: "rgba(0, 0, 0, 0.17)",
+    borderRadius: 10,
+    borderWidth: 1,
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+  },
+  itemRatingsLeft: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  itemRatingsRight: {
+    flexDirection: "row",
+  },
+  itemRatingsRatio: {
+    fontSize: 18,
+    marginRight: 10,
+    fontWeight: "500",
+  },
+  itemRatingsTotal: {
+    color: "#00000099",
+  },
+  itemDetailWrapper: {
+    marginBottom: 18,
+  },
+  itemDetail: {
+    lineHeight: 19,
+    fontSize: 16,
+    fontWeight: "400",
+  },
+  buttonWrapper: {
+    marginBottom: 20,
+    flex: 1,
+    justifyContent: "center",
+  },
+  btnPrimaryWrapper: {
+    width: "100%",
+    paddingHorizontal: 12,
+    borderRadius: 10,
+    backgroundColor: "#2A4905",
+    paddingVertical: 10,
+    alignSelf: "center",
+    maxWidth: 200,
+  },
+  button: {
+    alignSelf: "center",
+    // borderRadius: 30,
+    alignSelf: "center",
+    color: "#fff",
+    fontWeight: "700",
+
+    fontSize: 20,
   },
 });
